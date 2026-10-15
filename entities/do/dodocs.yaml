@@ -1,0 +1,79 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m506pprs4h6gew4epjfg43bt
+  slug: dodocs
+  slug_aliases: []
+  name: dodocs
+  domains:
+  - value: dodocs.ai
+    role: primary
+    valid_from: '2026-10-15T16:35:39.929Z'
+  category: finance-accounting
+profile:
+  summary: dodocs automates accounting document collection, extraction, reconciliation and posting to
+    accounting systems.
+  description: dodocs provides accounting automation for finance teams and accounting firms.
+  links:
+    site: https://dodocs.ai/
+sources:
+- source_id: src_e960756f337365730d3a4bd7399162976dbb4f35787f9c22bea8f1a878f9ae49
+  url: https://dodocs.ai/startups
+- source_id: src_786d01c314aad1b3331aaf207c242a88a0db3fa93102fd23e568dcd2c57cb165
+  url: https://dodocs.ai/
+programs: []
+offers:
+- offer_id: off_01m506pprsz0d4v638d96dyeb3
+  offer_slug: startup-year-end-close-discount
+  offer_slug_aliases: []
+  title: dodocs startup year-end close discount
+  summary: Companies incorporated within the past three years can receive 50% off a year-end close package
+    and preparation and filing of one US federal business return per eligible entity, with an active dodocs
+    subscription.
+  description: The federal return is Form 1120, 1120-S or 1065. A licensed CPA or EA partner of DoDocs
+    Inc delivers the service. The offer may be withdrawn at any time.
+  lifecycle:
+    status: active
+    effective_from: '2026-10-15T16:35:39.929Z'
+  economics:
+    benefits:
+    - benefit_id: ben_01
+      kind: discount
+      percentage:
+        kind: exact
+        basis_points: 5000
+      applies_to: The year-end close package and preparation and filing of one US federal business return
+        per eligible entity
+      description: 50% off the year-end close package and preparation and filing of one federal business
+        return per eligible entity.
+    consideration:
+      kind: variable
+      description: A fixed discounted year-end quote is provided before work. An active dodocs subscription
+        is required for the period being closed; consumption charges apply above included volumes.
+  eligibility:
+    rule:
+      kind: all
+      rules:
+      - criterion_id: cri_01
+        kind: predicate
+        fact: company.age_months
+        operator: lt
+        value:
+          type: number
+          value: 36
+        statement: The company was incorporated within the last three years.
+      - criterion_id: cri_02
+        kind: manual
+        reason: external-verification
+        statement: The company has an active dodocs subscription for the period being closed.
+  roles:
+    terms_authority_entity_id: ent_01m506pprs4h6gew4epjfg43bt
+    access_operator_entity_id: ent_01m506pprs4h6gew4epjfg43bt
+  access:
+    availability: public
+    method: form
+    url: https://dodocs.ai/startups
+    instructions: Apply through the startup offer form with your name, work email and role. dodocs reviews
+      applications and replies with a confirmed saving and code.
+  terms_url: https://dodocs.ai/startups
+  source_ids:
+  - src_e960756f337365730d3a4bd7399162976dbb4f35787f9c22bea8f1a878f9ae49
